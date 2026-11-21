@@ -1,0 +1,150 @@
+{
+  "projects": [
+    {
+      "id": "p-hangang",
+      "name": "한강물류 (예시)",
+      "site": "경기도",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "p-station",
+      "name": "역세권복합 (예시)",
+      "site": "서울",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    }
+  ],
+  "cases": [
+    {
+      "id": "c-payment",
+      "projectId": "p-hangang",
+      "title": "하도급 공사대금",
+      "courtCaseNo": "예시-2026가합1001",
+      "court": "서울중앙지방법원",
+      "type": "민사(공사대금)",
+      "stage": "1심",
+      "ourSide": "피고",
+      "opponent": "예시 하도급사",
+      "claimAmount": 850000000,
+      "lawFirm": "예시 법무법인",
+      "summary": "기성 검사 전 추가공사 금액을 두고 다투는 예시 사건입니다. 실제 사건이 아닙니다.",
+      "status": "진행",
+      "createdAt": "2026-10-20T00:00:00.000Z",
+      "updatedAt": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "id": "c-debt",
+      "projectId": "p-station",
+      "title": "채무부존재확인",
+      "courtCaseNo": "예시-2026가합2002",
+      "court": "서울서부지방법원",
+      "type": "민사(채무부존재)",
+      "stage": "1심",
+      "ourSide": "원고",
+      "opponent": "예시 금융기관",
+      "claimAmount": null,
+      "lawFirm": "",
+      "summary": "보증채무의 범위가 약정과 다른지 확인하는 예시 사건입니다.",
+      "status": "진행",
+      "createdAt": "2026-11-02T00:00:00.000Z",
+      "updatedAt": "2026-11-02T00:00:00.000Z"
+    },
+    {
+      "id": "c-restore",
+      "projectId": "p-hangang",
+      "title": "원상회복",
+      "courtCaseNo": "예시-2026가단3003",
+      "court": "수원지방법원",
+      "type": "민사(원상회복)",
+      "stage": "1심",
+      "ourSide": "피고",
+      "opponent": "예시 토지주",
+      "claimAmount": 120000000,
+      "lawFirm": "예시 법무법인",
+      "summary": "가설재 철거 범위에 대한 예시 사건입니다.",
+      "status": "진행",
+      "createdAt": "2026-09-15T00:00:00.000Z",
+      "updatedAt": "2026-11-01T00:00:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r-payment",
+      "caseId": "c-payment",
+      "facts": "계약서상 추가공사는 서면 지시와 기성 검사가 있을 때만 대금을 인정한다. 상대는 현장 구두 지시를 주장한다.",
+      "issues": "서면 지시가 없는 추가공사 대금이 인정되는지, 기성 내역과 청구액의 차이가 무엇인지.",
+      "ourPosition": "서면 지시와 검사가 없는 항목은 다툰다. 인정 가능한 기성만 분리해 제시한다.",
+      "theirPosition": "현장소장의 구두 지시와 시공 사진을 근거로 전액 지급을 구한다.",
+      "statutes": "민법 제664조(도급), 하도급거래 공정화에 관한 법률의 서면·대금 지급 규정. 조문은 최신 법령으로 다시 확인할 것.",
+      "risk": "중간",
+      "conclusion": "전액 인부는 어렵고, 사진으로 확인되는 일부 물량만 협의 대상으로 남긴다.",
+      "updatedAt": "2026-11-09T01:00:00.000Z"
+    },
+    {
+      "id": "r-restore",
+      "caseId": "c-restore",
+      "facts": "공사 종료 후 가설울타리 일부가 남아 있다. 철거 범위 도면이 계약 첨부인지가 다툼이다.",
+      "issues": "원상회복 의무의 범위와 이미 철거한 부분의 공제.",
+      "ourPosition": "계약 도면 안의 가설물만 철거 대상이다.",
+      "theirPosition": "부지 전체를 공사 전 상태로 되돌리라고 주장한다.",
+      "statutes": "민법 제654조, 제615조. 조문은 최신 법령으로 다시 확인할 것.",
+      "risk": "높음",
+      "conclusion": "도면과 현장 사진을 먼저 맞춰 철거 범위를 확정해야 한다.",
+      "updatedAt": "2026-11-01T01:00:00.000Z"
+    }
+  ],
+  "responses": [
+    {
+      "id": "a-payment",
+      "caseId": "c-payment",
+      "kind": "준비서면",
+      "title": "기성 내역 차이 준비서면",
+      "dueAt": "2026-11-12",
+      "status": "진행",
+      "owner": "법무",
+      "note": "인정 항목과 다투는 항목을 표로 나눈다.",
+      "createdAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "a-payment-evidence",
+      "caseId": "c-payment",
+      "kind": "증거",
+      "title": "기성검사조서 제출",
+      "dueAt": "2026-11-09",
+      "status": "할 일",
+      "owner": "현업",
+      "note": "기한이 지난 예시 항목이다.",
+      "createdAt": "2026-11-01T00:00:00.000Z"
+    },
+    {
+      "id": "a-restore",
+      "caseId": "c-restore",
+      "kind": "사실확인",
+      "title": "철거 범위 도면 대조",
+      "dueAt": "2026-11-18",
+      "status": "할 일",
+      "owner": "현업",
+      "note": "",
+      "createdAt": "2026-11-05T00:00:00.000Z"
+    }
+  ],
+  "hearings": [
+    {
+      "id": "h-payment",
+      "caseId": "c-payment",
+      "kind": "변론기일",
+      "dueAt": "2026-11-13T14:20",
+      "place": "동관 356호",
+      "note": "추가공사 범위 집중 변론",
+      "done": false
+    },
+    {
+      "id": "h-debt",
+      "caseId": "c-debt",
+      "kind": "변론기일",
+      "dueAt": "2026-11-11T15:00",
+      "place": "제417호",
+      "note": "예시 기일. 실제 재판이 아닙니다.",
+      "done": false
+    }
+  ]
+}
